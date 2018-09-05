@@ -5,8 +5,9 @@
   "author": "Jayabal Malaichamy",
   "license": "MIT",
   "scripts": {
-    "serve": "live-server public",
-    "build": "webpack",
+    "serve": "live-server public/",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "start-dev": "webpack-dev-server",
     "test": "jest --watchAll"
   },
@@ -40,6 +41,7 @@
     "webpack-dev-server": "^2.5.1"
   },
   "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.2",
     "jest": "^23.5.0"
   }
 }

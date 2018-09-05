@@ -6,7 +6,7 @@ import ExpenseListFilters from './ExpenseListFilters';
 
  const ExpenseList = (props) => (
      <div>
-         <h1>Expense List</h1>
+         {/* <h1>Expense List</h1> */}
          <ExpenseListFilters />
          { props.expenses.map( (data) => {
              return <ExpenseListItem key={data.id} { ...data } />
