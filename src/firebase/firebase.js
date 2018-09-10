@@ -15,24 +15,25 @@ const config = {
 
   const database = firebase.database();
 
-
-//   child_removed
-database.ref('expenses').on('child_removed', (snapshot) => {
-    console.log(snapshot.key, snapshot.val());
-});
-
-// child_changed
-database.ref('expenses').on('child_changed', (snapshot) => {
-    console.log(snapshot.key, snapshot.val());
-});
-
-// child_added
-database.ref('expenses').on('child_added', (snapshot) => {
-    console.log(snapshot.key, snapshot.val());
-});
+  export { firebase, database as default };
 
 
-// Get the data one time using "once"
+// //   child_removed
+// database.ref('expenses').on('child_removed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// });
+
+// // child_changed
+// database.ref('expenses').on('child_changed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// });
+
+// // child_added
+// database.ref('expenses').on('child_added', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// });
+
+// // Get the data one time using "once"
 // database.ref('expenses')
 //     .once('value')
 //     .then((snapshot) => {
@@ -47,7 +48,7 @@ database.ref('expenses').on('child_added', (snapshot) => {
         
 // });
 
-// Get the data and update the data on run time using "on"
+// // Get the data and update the data on run time using "on"
 // database.ref('expenses').on('value', (snapshot) => {
 //     const expenses = [];
 //     snapshot.forEach((childSnapshot) => {
@@ -59,13 +60,13 @@ database.ref('expenses').on('child_added', (snapshot) => {
 //     console.log(expenses);
 // });
 
-// Create data
-  database.ref('expenses').push({
-      description:'Electricity Bill',
-      note: 'Jan month electricity paid',
-      amount: 7300,
-      createdAt: 2000
-  })
+// // Create data
+//   database.ref('expenses').push({
+//       description:'Electricity Bill',
+//       note: 'Jan month electricity paid',
+//       amount: 7300,
+//       createdAt: 2000
+//   })
 
 
 
