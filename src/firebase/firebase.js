@@ -33,7 +33,7 @@ const config = {
 //     console.log(snapshot.key, snapshot.val());
 // });
 
-// // Get the data one time using "once"
+// Get the data one time using "once"
 // database.ref('expenses')
 //     .once('value')
 //     .then((snapshot) => {
@@ -48,17 +48,17 @@ const config = {
         
 // });
 
-// // Get the data and update the data on run time using "on"
-// database.ref('expenses').on('value', (snapshot) => {
-//     const expenses = [];
-//     snapshot.forEach((childSnapshot) => {
-//         expenses.push({
-//             id: childSnapshot.key,
-//             ...childSnapshot.val()
-//         });
-//     });
-//     console.log(expenses);
-// });
+// Get the data and update the data on run time using "on"
+database.ref('expenses').on('value', (snapshot) => {
+    const expenses = [];
+    snapshot.forEach((childSnapshot) => {
+        expenses.push({
+            id: childSnapshot.key,
+            ...childSnapshot.val()
+        });
+    });
+    console.log(expenses);
+});
 
 // // Create data
 //   database.ref('expenses').push({
