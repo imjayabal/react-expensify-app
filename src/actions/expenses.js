@@ -66,16 +66,16 @@ export const startSetExpenses = () => {
   return (dispatch) => {
     
     return database.ref('expenses').once('value').then((snapshot) => {
-      const expenses = [];
+      const expense = [];
       
       snapshot.forEach((childSnapshot) => {
-        expenses.push({
+        expense.push({
           id: childSnapshot.key,
           ...childSnapshot.val()
         });
       });
 
-      dispatch(setExpenses(expenses));
+      dispatch(setExpenses(expense));
     });
   };
 };

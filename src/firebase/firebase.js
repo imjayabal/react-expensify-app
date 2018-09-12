@@ -1,6 +1,7 @@
 // import * as firebase from 'firebase';
 import firebase from 'firebase/app';
 import 'firebase/database';
+import 'firebase/auth';
 
 const config = {
     apiKey: "AIzaSyARQyAK82r6swRMjC_fyTpWPQOOE5KZNG8",
@@ -14,10 +15,11 @@ const config = {
   firebase.initializeApp(config);
 
   const database = firebase.database();
+  const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-  export { firebase, database as default };
+  export { firebase, googleAuthProvider, database as default };
 
-
+  
 // //   child_removed
 // database.ref('expenses').on('child_removed', (snapshot) => {
 //     console.log(snapshot.key, snapshot.val());
@@ -49,16 +51,16 @@ const config = {
 // });
 
 // Get the data and update the data on run time using "on"
-database.ref('expenses').on('value', (snapshot) => {
-    const expenses = [];
-    snapshot.forEach((childSnapshot) => {
-        expenses.push({
-            id: childSnapshot.key,
-            ...childSnapshot.val()
-        });
-    });
-    console.log(expenses);
-});
+// database.ref('expenses').on('value', (snapshot) => {
+//     const expenses = [];
+//     snapshot.forEach((childSnapshot) => {
+//         expenses.push({
+//             id: childSnapshot.key,
+//             ...childSnapshot.val()
+//         });
+//     });
+//     console.log(expenses);
+// });
 
 // // Create data
 //   database.ref('expenses').push({
