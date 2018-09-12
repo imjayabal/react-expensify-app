@@ -1,0 +1,8 @@
+.input-group{
+    display: flex;
+    margin-bottom: $l-size;
+    &__item{
+        display: flex;
+        margin-right: $s-size;
+    }
+}
