@@ -4,31 +4,14 @@ import moment from 'moment';
 import numeral from 'numeral';
 
 const ExpenseListItem = ({ id, description, amount, createdAt }) => (
-    <div>
-        <div>
-            <Link to={`/edit/${id}`}>
-                <h3>{ description }</h3>
-            </Link>
-            <p>
-                {numeral(amount).format('$0,0.00')}
-                - 
-                {moment(createdAt).format('MMMM Do, YYYY')}
-            </p>
-        </div>
-    </div>
+        <Link className="list-item" to={`/edit/${id}`}>
+            <div>
+                <h3 className="list-item__title">{ description }</h3>
+                <span className="list-item__sub-title">{moment(createdAt).format('MMMM Do, YYYY')}</span>
+            </div>
+            <h3 className="list-item__data">{numeral(amount).format('$0,0.00')}</h3>
+        </Link>
 );
-
-// or
-
-// const ExpenseListItem = ( props ) => (
-//     <div>
-//         <h3>{ props.description }</h3>
-//         <p>{props.amount} - {props.createdAt}</p>
-//         <button onClick={ (e) => {
-//             props.dispatch(removeExpense({id: props.id}))
-//         }}>Remove</button>
-//     </div>
-// );
 
 
 export default ExpenseListItem;
