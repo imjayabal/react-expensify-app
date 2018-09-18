@@ -16,4 +16,12 @@
     &--secondary{
         background: #888;
     }
+
+    &--facebook{
+        background: $facebook;
+    }
+
+    &--google{
+        background: $google;
+    }
 }
