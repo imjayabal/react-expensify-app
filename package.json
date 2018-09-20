@@ -13,6 +13,7 @@
     "heroku-postbuild": "npm run build:prod"
   },
   "dependencies": {
+    "@mdi/font": "^2.7.94",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

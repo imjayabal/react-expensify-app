@@ -3,6 +3,15 @@
     margin-bottom: $l-size;
     padding: $l-size 0;
 
+    &__count{
+        display: flex;
+        justify-content: space-between;
+        p{
+            font-size: 14px;
+            color: $grey;
+        }
+    }
+
     &__title{
         font-weight: 300;
         margin: 0;

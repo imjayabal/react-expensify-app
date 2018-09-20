@@ -8,7 +8,15 @@ export const login = (uid) => ({
 
 export const startGmailLogin = () => {
     return () => {
-        return firebase.auth().signInWithPopup(googleAuthProvider);
+        return firebase.auth().signInWithPopup(googleAuthProvider)
+        // .then((result) => {
+        //     const userData = result.user;
+        //     const userName = userData.displayName;
+        //     const userEmail = userData.email;
+        //     const userImage = userData.photoURL;
+        //     console.log(userName, userEmail,userImage);
+        //     <p>{userName}</p>
+        // });
     }
 };
 export const startFacebookLogin = () => {
@@ -26,3 +34,4 @@ export const startLogout = () => {
         return firebase.auth().signOut();
     }
 };
+

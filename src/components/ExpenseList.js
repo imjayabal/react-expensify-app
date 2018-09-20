@@ -10,6 +10,7 @@ import ExpenseListFilters from '../components/ExpenseListFilters';
             <div className="show-for-mobile">Expenses</div>
             <div className="show-for-desktop">Expense</div>
             <div className="show-for-desktop">Amount</div>
+            <div className="show-for-desktop">Actions</div>
         </div>
         <div className="list-body">
             { 
@@ -29,7 +30,8 @@ import ExpenseListFilters from '../components/ExpenseListFilters';
 
  const stateConnect = (state) => {
     return {
-        expenses: selectExpenses(state.expenses, state.filters)
+        expenses: selectExpenses(state.expenses, state.filters),
+        // expensesAll: state.expenses
     }
  }
 

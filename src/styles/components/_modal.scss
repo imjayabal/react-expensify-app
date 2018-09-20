@@ -1,0 +1,47 @@
+// React Modal style overwrite
+.ReactModal{
+
+    &__Overlay{
+        background: rgba(0, 0, 0, 0.75) !important;
+    }
+
+    &__Content{
+        width: 90%;
+        max-width: 40rem;
+        height: 30rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+// custom style
+.modal{
+
+    &__remove{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 30rem;
+        background: $off-white;
+        padding: .5rem 2rem;
+        border-radius: 3rem;
+        cursor: not-allowed;
+
+        p{
+            font-size: 1.4rem;
+            margin:0;
+            color: $grey; 
+        }
+    }
+
+    &__actions{
+        margin-top: 6.2rem;
+        .button{
+            margin: 0 $s-size;
+            padding: $s-size $l-size;
+        }
+    }
+}

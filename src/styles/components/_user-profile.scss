@@ -1,0 +1,28 @@
+.header__user{
+
+}
+
+.user-profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__image{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+    }
+
+    &__details{
+        margin-left:10px;
+        p{
+            &.name{
+                color: white;
+            }
+            &.email{
+                color: #7a879c;
+                font-size: 12px;
+            }
+        }
+    }
+}

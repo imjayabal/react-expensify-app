@@ -61,4 +61,12 @@
             padding-left: $s-size;
         }
     }
+
+    &__edit{
+        padding: .5rem;
+        text-align: right;
+        color: $blue;
+        text-decoration: none;
+        font-size: 14px;
+    }
 }
